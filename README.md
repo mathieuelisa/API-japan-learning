@@ -1,3 +1,3 @@
-# API DE MOTS JAPONAIS
+# API JAPONESE WORDS
 
-API de mots japonais permettant ainsi l'apprentissage de la langue.
+Japanese words API thus allowing the learning of the language.
