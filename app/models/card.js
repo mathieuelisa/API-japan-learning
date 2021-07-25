@@ -12,6 +12,7 @@ Card.init(
   {
     sequelize,
     tableName: "card",
+    timestamps: false,
   }
 );
 
