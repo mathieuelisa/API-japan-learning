@@ -27,13 +27,13 @@ INSERT INTO "list" ("name") VALUES
 ('Animaux');
 
 INSERT INTO "card" ("name_FR","name_EN","name_JP","list_id") VALUES
-('Maison', 'House', 'Uchi', 1),
-('Ascenseur','Elevato','Erebeetaa', 1),
-('Four','Four','Oobun', 2),
-('Oreiller','Hear','Makura', 1),
-('Refrigerateur','Fridge', 'Reizouko', 2),
-('Lit','Bed', 'Beddo', 3),
-('Araignée','Spider', 'Kumo', 4);
+(1, 'Maison', 'House', 'Uchi', 1),
+(2, 'Ascenseur','Elevato','Erebeetaa', 1),
+(3, 'Four','Four','Oobun', 2),
+(4, 'Oreiller','Hear','Makura', 1),
+(5, 'Refrigerateur','Fridge', 'Reizouko', 2),
+(6, 'Lit','Bed', 'Beddo', 3),
+(7, 'Araignée','Spider', 'Kumo', 4);
 
 
 COMMIT;
