@@ -10,6 +10,7 @@ List.init(
   {
     sequelize,
     tableName: "list",
+    timestamps: false,
   }
 );
 
