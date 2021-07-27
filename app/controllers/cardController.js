@@ -9,6 +9,15 @@ const cardController = {
       res.status(500).json({ err: "You couldn't recover all of your cards" });
     }
   },
+
+  getCardByPk: async (req, res) => {
+    try {
+      const card = await Card.findByPk(req.params.id);
+      res.json(card);
+    } catch (err) {
+      res.status(500).json({ err: "You couldn't recover your card" });
+    }
+  },
 };
 
 module.exports = cardController;
