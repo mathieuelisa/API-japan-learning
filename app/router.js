@@ -1,4 +1,13 @@
-// const express = require("express");
-// const router = express.Router();
+const express = require("express");
 
-// module.exports = router;
+const cardController = require("./controllers/cardController");
+
+const router = express.Router();
+
+router.get("/cards", cardController.getAllCards);
+
+router.use((req, res) => {
+  res.status(400).send("Service doesnt exists");
+});
+
+module.exports = router;
