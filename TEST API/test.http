@@ -1,3 +1,6 @@
+
+# TEST CARDS
+
 GET http://localhost:3000/cards
 Accept: application/json
 ###
@@ -7,7 +10,18 @@ Accept: application/json
 Content-Type: application/json
 ###
 
+
+
+
+
+# TEST LISTS
+
 GET http://localhost:3000/lists
+Accept: application/json
+Content-Type: application/json
+###
+
+GET http://localhost:3000/lists/1
 Accept: application/json
 Content-Type: application/json
 ###

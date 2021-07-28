@@ -1,7 +1,7 @@
 const { Card } = require("../models/index");
 
 const cardController = {
-  getAllCards: async (req, res) => {
+  getAll: async (req, res) => {
     try {
       const cards = await Card.findAll();
       res.json(cards);
@@ -10,7 +10,7 @@ const cardController = {
     }
   },
 
-  getCardByPk: async (req, res) => {
+  getOne: async (req, res) => {
     try {
       const card = await Card.findByPk(req.params.id);
       res.json(card);
