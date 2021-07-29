@@ -18,6 +18,25 @@ const cardController = {
       res.status(500).json({ err: "You couldn't recover your card" });
     }
   },
+
+  getAllByListId: async (req, res) => {
+    try {
+      const listId = req.params.id;
+
+      const card = await Card.findAll({
+        where: {
+          list_id: listId,
+        },
+      });
+      res.json(card);
+    } catch (err) {
+      res
+        .status(500)
+        .json({
+          err: "You couldn't recover all your cards from a specific list",
+        });
+    }
+  },
 };
 
 module.exports = cardController;

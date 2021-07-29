@@ -6,12 +6,13 @@ const listController = require("./controllers/listController");
 const router = express.Router();
 
 // CARDS
-router.get("/cards", cardController.getAll);
-router.get("/cards/:id", cardController.getOne);
+router.get("/api/cards", cardController.getAll);
+router.get("/api/cards/:id", cardController.getOne);
+router.get("/api/lists/:id/cards", cardController.getAllByListId);
 
 //LISTS
-router.get("/lists", listController.getAll);
-router.get("/lists/:id", listController.getOne);
+router.get("/api/lists", listController.getAll);
+router.get("/api/lists/:id", listController.getOne);
 
 router.use((req, res) => {
   res.status(400).send("Service doesnt exists..");
