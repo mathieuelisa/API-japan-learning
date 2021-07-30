@@ -5,12 +5,13 @@ GET http://localhost:3000/api/cards
 Accept: application/json
 ###
 
-GET http://localhost:3000/api/cards/1
+GET http://localhost:3000/api/cards/52
 Accept: application/json
 Content-Type: application/json
 ###
 
-GET http://localhost:3000/api/lists/2/cards
+GET http://localhost:3000/api/lists/11
+/cards
 ###
 
 
