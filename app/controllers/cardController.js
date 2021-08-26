@@ -2,6 +2,12 @@ const { Card } = require("../models/index");
 
 const cardController = {
   getAll: async (req, res) => {
+    // const headers = req.headers
+    //   if (headers['Accept'] && headers['Accept'] === 'application/json') {
+    //     res.json(data)
+    //   } else {
+    //     res.render('mavue')
+    //   }
     try {
       const cards = await Card.findAll();
       res.json(cards);
