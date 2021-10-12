@@ -7,11 +7,22 @@ const { Sequelize } = require("sequelize");
 //   };
 // }
 
-const sequelize = new Sequelize(process.env.PG_URL, {
+const config = {
   define: {
+    timestamps: false,
     underscored: false,
   },
   logging: false,
-});
+};
+
+if (process.env.NODE_ENV === `production`) {
+  config.dialectOptions = {
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  };
+}
+
+const sequelize = new Sequelize(process.env.DATABASE_URL, config);
 
 module.exports = sequelize;
